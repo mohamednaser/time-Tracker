@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'transaction/index'
+  get 'transaction/view'
+  get '/login' , to: 'user#login'
+  post '/login' , to: 'user#view'
+
 end
