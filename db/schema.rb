@@ -12,24 +12,24 @@
 
 ActiveRecord::Schema.define(version: 2020_03_09_233959) do
 
-  create_table "group_tables", force: :cascade do |t|
-    t.string "Name"
-    t.string "Icon"
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "transaction_tables", force: :cascade do |t|
-    t.integer "Authorid"
-    t.string "Name"
-    t.string "Amount"
-    t.integer "Groupid"
+  create_table "transactions", force: :cascade do |t|
+    t.integer "authorid"
+    t.string "name"
+    t.string "amount"
+    t.integer "groupid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users_tables", force: :cascade do |t|
-    t.string "Name"
+  create_table "users", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

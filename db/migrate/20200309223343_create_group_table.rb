@@ -1,8 +1,8 @@
 class CreateGroupTable < ActiveRecord::Migration[5.2]
   def change
-    create_table :groups_table do |t|
-      t.string :Name
-      t.string :Icon 
+    create_table :groups do |t|
+      t.string :name
+      t.string :icon 
 
       t.timestamps
     end
