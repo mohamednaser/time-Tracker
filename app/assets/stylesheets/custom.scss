@@ -1,0 +1,94 @@
+// Place all the styles related to the Transaction controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  height: 100%;
+
+  .left-nav {
+    width: 25%;
+    height: 100%;
+    background-color: #3778c2;
+    float: left;
+
+    .profile {
+      padding-top: 5%;
+      padding-left: 25%;
+
+      .profile-img {
+        display: inline-block;
+        border-radius: 50%;
+      }
+    }
+
+    .side-bar-link {
+      padding: 5vh;
+      font-size: larger;
+      font-family: "Montserrat";
+      font-weight: bolder;
+    }
+  }
+
+  .right-container {
+    width: 75%;
+    height: 100%;
+    background-color: #f0f2f1;
+    float: right;
+
+    .internal-header {
+      background-color: rgb(48, 106, 170);
+      text-align: center;
+      padding: 15px 0;
+
+      h2 {
+        margin: 0;
+        font-size: larger;
+      }
+    }
+    .total-credit-header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 15px 0;
+
+      h2 {
+        color: #b4b6bc;
+        margin: 0;
+      }
+    }
+
+    .single-transaction {
+      margin: 5vh;
+      background-color: #fdfdfd;
+      display: flex;
+
+      .group-icon {
+        margin: 2vh;
+        padding: 0;
+      }
+
+      .transaction-amount {
+        margin-top: 3%;
+        margin-right: 5%;
+        padding-left: 50%;
+      }
+    }
+
+    .new-transaction-div {
+      background-color: #60b524;
+      text-align: center;
+
+      button {
+        border-width: 0.5vh;
+        width: 80%;
+        height: 12vh;
+        margin: 3vh;
+        border-color: white;
+        background-color: #60b524;
+        border: solid;
+        color: #e1f0da;
+        font-size: x-large;
+        font-weight: bolder;
+      }
+    }
+  }
+}

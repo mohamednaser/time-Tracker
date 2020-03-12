@@ -1,6 +1,6 @@
 class CreateTransactionsTable < ActiveRecord::Migration[5.2]
   def change
-       create_table :transaction_tables do |t|
+       create_table :transactions_table do |t|
         t.integer :Authorid
         t.string :Name
         t.string :Amount
