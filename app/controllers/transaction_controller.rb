@@ -8,4 +8,9 @@ class TransactionController < ApplicationController
   
   def view
   end
+
+  def new
+    
+  end
+  
 end

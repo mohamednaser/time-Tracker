@@ -1,4 +1,4 @@
-<div class="container">
+<div class="main-container">
 
     <%= render "layouts/left" %>
     <div class='right-container'>
@@ -23,8 +23,7 @@
                 </div>
             </div>
             <div class="new-transaction-div">
-              <button type="button" class="btn btn-success">New Transaction</button>
-
+              <%= link_to  "New Transaction", transaction_new_path %>  
             </div>
         </div>
     </div>

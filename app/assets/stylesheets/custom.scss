@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
+.main-container {
   height: 100%;
-
+  margin: 0;
   .left-nav {
-    width: 25%;
+    width: 20%;
     height: 100%;
     background-color: #3778c2;
     float: left;
@@ -26,11 +26,12 @@
       font-size: larger;
       font-family: "Montserrat";
       font-weight: bolder;
+      color: #8198b6;
     }
   }
 
   .right-container {
-    width: 75%;
+    width: 80%;
     height: 100%;
     background-color: #f0f2f1;
     float: right;
@@ -70,24 +71,6 @@
         margin-top: 3%;
         margin-right: 5%;
         padding-left: 50%;
-      }
-    }
-
-    .new-transaction-div {
-      background-color: #60b524;
-      text-align: center;
-
-      button {
-        border-width: 0.5vh;
-        width: 80%;
-        height: 12vh;
-        margin: 3vh;
-        border-color: white;
-        background-color: #60b524;
-        border: solid;
-        color: #e1f0da;
-        font-size: x-large;
-        font-weight: bolder;
       }
     }
   }
