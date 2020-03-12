@@ -7,23 +7,30 @@
         </div>
         <div class="transactios-cotainer">
             <div class="single-transaction">
-               <form class="new-transaction-form">
+                <%= form_for(@transaction , url: transaction_create_path(@transaction) ,class: "new-transaction-form") do |f| %>
+                    <% if @transaction.errors.full_messages.any? %>                    
+                        <%= render 'layouts/error_messages', errors: @transaction.errors %>
+                    <% end %>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Transaction Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Name">
+                        <%= f.label :name, "Transaction Name" %>
+                        <%= f.text_field :name ,class: "form-control" %>
                     </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Transaction Group</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Group">
+                    <div class="form-group">
+                        <%= f.label :groupid, "Group Id" %>
+                        <%= f.text_field :groupid ,class: "form-control" %>
                     </div>
-                       <div class="form-group">
-                        <label for="exampleInputEmail1">Transaction Time</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Time">
+                    <div class="form-group">
+                        <%= f.label :authorid, "Author ID" %>
+                        <%= f.text_field :authorid ,class: "form-control" %>
                     </div>
-                    <div class="new-transaction-div">
-                        <button type="button" class="btn btn-success">Save Transaction</button>
+                    <div class="form-group">
+                        <%= f.label :amount, "Amount" %>
+                        <%= f.text_field :amount ,class: "form-control" %>
                     </div>
-                </form>
+
+                    <%= f.submit "Save Transaction" ,class: "btn btn-success"%>
+
+                <% end %>
             </div>
 
         </div>
