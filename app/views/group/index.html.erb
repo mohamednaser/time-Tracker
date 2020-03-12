@@ -5,20 +5,25 @@
         <div class="internal-header"> 
             <h2>All groups</h2>
         </div>
-        <div class="transactios-cotainer">
-            <div class="single-transaction">
-                <div class="group-icon">
-                    <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg" class="profile-img"/>
-                </div>
-                <div class="transaction-detail">
-                    <h3> Log 2 ours in project</h3>
-                    <span> 14 April 2020 </span>
-                </div>
-                <div class="transaction-amount">
-                    02:15 
-                </div>
-            </div>
-            <div class="new-transaction-div">
+        <div class="groups-cotainer">
+            <%
+                @groups.each do |group|
+                %>
+                    <div class="single-group">
+                        <div class="group-icon">
+                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg" class="profile-img"/>
+                        </div>
+                        <div class="group-detail">
+                            <h3> <%=  group.name %></h3>
+                            <span> <%=  group.created_at %> </span>
+                        </div>
+                    </div>
+                <%
+                end
+                
+            %>
+
+            <div class="new-group-div">
               <%= link_to  "New roup", group_new_path %>  
             </div>
         </div>

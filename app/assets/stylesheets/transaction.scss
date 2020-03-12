@@ -23,3 +23,21 @@
 .new-transaction-form {
   width: 100%;
 }
+
+
+.single-transaction {
+  margin: 1vh;
+  background-color: #fdfdfd;
+  display: flex;
+
+  .group-icon {
+    margin: 2vh;
+    padding: 0;
+  }
+
+  .transaction-amount {
+    margin-top: 3%;
+    margin-right: 5%;
+    padding-left: 50%;
+  }
+}

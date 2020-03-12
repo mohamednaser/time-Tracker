@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   get 'group/index'
-  get 'group/create'
+  post "group/create", to: "group#create"
   get 'group/new'
 
   get 'transaction/index'

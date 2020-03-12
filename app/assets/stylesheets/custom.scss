@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+label{
+  display: block !important;
+}
+
 .main-container {
   height: 100%;
   margin: 0;
@@ -57,21 +61,5 @@
       }
     }
 
-    .single-transaction {
-      margin: 5vh;
-      background-color: #fdfdfd;
-      display: flex;
-
-      .group-icon {
-        margin: 2vh;
-        padding: 0;
-      }
-
-      .transaction-amount {
-        margin-top: 3%;
-        margin-right: 5%;
-        padding-left: 50%;
-      }
-    }
   }
 }

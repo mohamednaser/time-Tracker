@@ -3,25 +3,26 @@
     <%= render "layouts/left" %>
     <div class='right-container'>
         <div class="internal-header"> 
-            <h2>New Transaction</h2>
+            <h2>New Group</h2>
         </div>
         <div class="transactios-cotainer">
-            <div class="single-transaction">
-               <form class="new-transaction-form">
+            <div class="new-group-div">                
+                <%= form_for(@group , url: group_create_path(@group) ,class: "new-transaction-form") do |f| %>
+                    <% if @group.errors.full_messages.any? %>                    
+                        <%= render 'layouts/error_messages', errors: @group.errors %>
+                    <% end %>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Group Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Name">
+                        <%= f.label :name, "Group Name" %>
+                        <%= f.text_field :name ,class: "form-control" %>
                     </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Group Icon</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Transaction Group">
+                    <div class="form-group">
+                        <%= f.label :icon, "icon" %>
+                        <%= f.text_field :icon ,class: "form-control" %>
                     </div>
-                    <div class="new-transaction-div">
-                        <button type="button" class="btn btn-success">Save Group</button>
-                    </div>
-                </form>
-            </div>
 
+                         <%= f.submit "Save Group" ,class: "btn btn-success"%>
+                 <% end %>
+            </div>
         </div>
     </div>
 </div>

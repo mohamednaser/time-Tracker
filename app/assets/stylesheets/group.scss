@@ -1,3 +1,35 @@
 // Place all the styles related to the group controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.new-group-div {
+    margin: 5vh;
+  
+    a {
+      border-width: 0.5vh;
+      width: 80%;
+      height: 12vh;
+      margin: 3vh;
+      border-color: white;
+      background-color: #60b524;
+      border: solid;
+      color: #e1f0da;
+      font-size: x-large;
+      font-weight: bolder;
+    }
+  }
+  
+  .new-group-form {
+    width: 100%;
+  }
+  
+  
+  .single-group {
+    margin: 1vh;
+    background-color: #fdfdfd;
+    display: flex;
+  
+    .group-icon {
+      margin: 2vh;
+      padding: 0;
+    }
+  }
