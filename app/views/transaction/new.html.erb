@@ -21,16 +21,16 @@
                         <%= f.text_field :name ,class: "form-control" %>
                     </div>
                     <div class="form-group">
-                        <%= f.label :group_id, "Group Id" %>
-                        <%= f.select :group_id , available_group_dropdown , class: "form-control" %>
-                    </div>
-                    <div class="form-group">
                         <%= f.label :hours, "Hours" %>
                         <%= f.text_field :hours ,class: "form-control" %>
                         <%= f.label :minutes, "Minutes" %>
                         <%= f.text_field :minutes ,class: "form-control" %>
                     </div>
 
+                    <div class="form-group">
+                        <%= f.label :group_id, "Group " %>
+                        <%= f.select :group_id , available_group_dropdown , class: "form-control" %>
+                    </div>
                     <%= f.submit "Save Transaction" ,class: "btn btn-success"%>
 
                 <% end %>

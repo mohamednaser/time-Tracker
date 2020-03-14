@@ -9,7 +9,6 @@
   a {
     border-width: 0.5vh;
     width: 80%;
-    height: 12vh;
     margin: 3vh;
     border-color: white;
     background-color: #60b524;
@@ -24,6 +23,10 @@
   width: 100%;
 }
 
+.new_transaction {
+  margin: auto;
+  width: 50%;
+}
 
 .single-transaction {
   margin: 1vh;
