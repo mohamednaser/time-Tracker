@@ -1,0 +1,16 @@
+<div class="main-container">
+
+    <%= render "layouts/left" %>
+    <div class='right-container'>
+        <div class="internal-header"> 
+            <h2>Group Transactions</h2>
+        </div>
+        <div class="transactios-cotainer">
+             <%
+                @transactions.each do |transaction|
+                 concat render "transaction", transaction: transaction             
+                end                
+            %>
+        </div>
+    </div>
+</div>

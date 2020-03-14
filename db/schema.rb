@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_03_12_223803) do
     t.integer "authorid"
     t.string "name"
     t.integer "amount"
-    t.integer "groupid"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

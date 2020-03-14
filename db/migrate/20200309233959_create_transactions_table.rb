@@ -4,7 +4,7 @@ class CreateTransactionsTable < ActiveRecord::Migration[5.2]
         t.integer :authorid
         t.string :name
         t.integer :amount
-        t.integer :groupid
+        t.integer :group_id
 
         add_foreign_key :users, column: :authorid
         

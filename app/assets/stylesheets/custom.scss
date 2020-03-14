@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-label{
+label {
   display: block !important;
 }
 
@@ -61,6 +61,10 @@ label{
         margin: 0;
       }
     }
+  }
 
+  .group-img {
+    width: 20vh;
+    height: 15vh;
   }
 }

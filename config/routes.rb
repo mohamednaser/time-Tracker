@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'group/index'
   post "group/create", to: "group#create"
   get 'group/new'
+  get 'group/transactions/:id' , to: "transaction#group_transactions"
+
 
   get 'transaction/index'
   get 'transaction/view'

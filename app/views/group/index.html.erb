@@ -12,17 +12,17 @@
                 <%
                 else 
                     @groups.each do |group|
-                    %>
-                        <div class="single-group">
+                    %>  
+                        <a class="single-group" href="/group/transactions/<%= group.id %>">
                             <div class="group-icon">
-                                <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg" class="profile-img"/>
+                                <img src="<%= group.icon %>" class="group-img"/>
                             </div>
                             <div class="group-detail">
                                 <h3> <%=  group.name %></h3>
                                 <span> <%=  group.created_at %> </span>
                             </div>
-                        </div>
-                    <%
+                        </a>
+                     <%
                     end
                 end 
             %>

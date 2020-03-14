@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
   
     return redirect_to login_path if cookies[:user_id].nil?    
     
-    @current_user = User.find(cookies[:user_id])
+    @current_user = User.find_by(id: cookies[:user_id])
     if @current_user.nil?
-        redirect_to login_path
+        redirect_to login_path, notice: 'You Should Login.'
     end
  end
 end
