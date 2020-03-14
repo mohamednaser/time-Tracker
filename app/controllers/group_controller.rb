@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 class GroupController < ApplicationController
+  before_action :is_signed_in
+
   def index
     @groups = Group.all
   end
 
   def create
     @group = Group.new(post_params)
-
+    
     if @group.save
       redirect_to group_index_path, notice: 'Group was successfully created.'
     else

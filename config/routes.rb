@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'auth/login'
   get 'group/index'
   post "group/create", to: "group#create"
   get 'group/new'
@@ -17,6 +15,8 @@ Rails.application.routes.draw do
 
   get '/register' , to: 'user#new'
   post '/register' , to: 'user#create'
+
+  get '/logout' , to: 'auth#logout'
 
 
 end

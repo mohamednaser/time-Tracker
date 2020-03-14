@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class TransactionController < ApplicationController
+  before_action :is_signed_in
+  
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.where("`authorid` =  #{@current_user.id}").most_recent
   end
 
   def external
@@ -18,7 +20,7 @@ class TransactionController < ApplicationController
 
   def create
     @transaction = Transaction.new(post_params)
-
+    @transaction.authorid = @current_user.id
     @transaction.amount = (post_params[:hours].to_i * 60 * 60 ) + (post_params[:minutes].to_i * 60)
     
     if @transaction.save

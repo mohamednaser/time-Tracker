@@ -16,6 +16,11 @@ class AuthController < ApplicationController
     @user = User.new
   end
 
+  def logout
+    cookies.delete :user_id
+    redirect_to login_path
+  end
+  
   def post_params
     params.require(:user).permit(:name)
   end
