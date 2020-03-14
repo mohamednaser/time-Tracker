@@ -17,15 +17,17 @@
                     </div>
                     <div class="form-group">
                         <%= f.label :groupid, "Group Id" %>
-                        <%= f.text_field :groupid ,class: "form-control" %>
+                        <%= f.select :groupid , available_group_dropdown , class: "form-control" %>
                     </div>
                     <div class="form-group">
                         <%= f.label :authorid, "Author ID" %>
                         <%= f.text_field :authorid ,class: "form-control" %>
                     </div>
                     <div class="form-group">
-                        <%= f.label :amount, "Amount" %>
-                        <%= f.text_field :amount ,class: "form-control" %>
+                        <%= f.label :hours, "Hours" %>
+                        <%= f.text_field :hours ,class: "form-control" %>
+                        <%= f.label :minutes, "Minutes" %>
+                        <%= f.text_field :minutes ,class: "form-control" %>
                     </div>
 
                     <%= f.submit "Save Transaction" ,class: "btn btn-success"%>

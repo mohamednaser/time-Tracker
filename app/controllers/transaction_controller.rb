@@ -19,6 +19,8 @@ class TransactionController < ApplicationController
   def create
     @transaction = Transaction.new(post_params)
 
+    @transaction.amount = (post_params[:hours].to_i * 60 * 60 ) + (post_params[:minutes].to_i * 60)
+    
     if @transaction.save
       redirect_to transaction_index_path, notice: 'transaction was successfully created.'
     else
@@ -29,7 +31,7 @@ class TransactionController < ApplicationController
 
 
   def post_params
-    params.require(:transaction).permit(:name, :amount , :groupid ,:authorid)
+    params.require(:transaction).permit(:name, :hours , :minutes , :groupid ,:authorid)
   end
   
 end

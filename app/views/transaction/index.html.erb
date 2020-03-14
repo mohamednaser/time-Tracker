@@ -7,12 +7,13 @@
         </div>
         <div class="total-credit-header"> 
             <h2>Total Logged hours </h2>
-            <span> 45:12 hr<span>
+            <span><%= @transactions.sum("amount") %><span>
         </div>
         <div class="transactios-cotainer">
             <%
-                if @transactions.empty?
-                        conat " <h2> NoTransactions </h2> "
+                if @transactions.empty? %>
+                    <h2> No Transactions Found </h2> 
+                <%
                 else 
                     @transactions.each do |transaction|
                         concat render "transaction", transaction: transaction             

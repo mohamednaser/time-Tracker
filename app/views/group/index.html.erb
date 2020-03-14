@@ -7,20 +7,24 @@
         </div>
         <div class="groups-cotainer">
             <%
-                @groups.each do |group|
-                %>
-                    <div class="single-group">
-                        <div class="group-icon">
-                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg" class="profile-img"/>
-                        </div>
-                        <div class="group-detail">
-                            <h3> <%=  group.name %></h3>
-                            <span> <%=  group.created_at %> </span>
-                        </div>
-                    </div>
+                if @groups.empty? %>
+                    <h2> No Groups Found </h2>
                 <%
-                end
-                
+                else 
+                    @groups.each do |group|
+                    %>
+                        <div class="single-group">
+                            <div class="group-icon">
+                                <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg" class="profile-img"/>
+                            </div>
+                            <div class="group-detail">
+                                <h3> <%=  group.name %></h3>
+                                <span> <%=  group.created_at %> </span>
+                            </div>
+                        </div>
+                    <%
+                    end
+                end 
             %>
 
             <div class="new-group-div">
