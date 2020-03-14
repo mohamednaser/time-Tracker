@@ -1,12 +1,12 @@
 <div class="single-transaction">
     <div class="group-icon">
-        <img src="<%= group_icon(transaction) %>" class="profile-img"/>
+        <img src="<%= group_icon(transaction) %>" class="group-img"/>
     </div>
     <div class="transaction-detail">
         <h3>  <%= transaction.name%></h3>
         <span>  <%= transaction.created_at%> </span>
     </div>
     <div class="transaction-amount">
-            <%= transaction.amount%>
+        <%= seconds_to_hms(transaction.amount) %>
     </div>
 </div>

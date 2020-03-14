@@ -8,10 +8,11 @@ class TransactionController < ApplicationController
   end
 
   def external
-    @transactions = Transaction.where(group_id: nil).all
+    @transactions = Transaction.where("`authorid` =  #{@current_user.id} ANd `group_id` IS NULL").most_recent
   end
 
   def group_transactions
+    @group = Group.find(params[:id].to_i)
     @transactions = Transaction.where(group_id: params[:id].to_i).all
   end
 
