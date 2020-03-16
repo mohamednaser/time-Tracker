@@ -1,0 +1,70 @@
+// Place all the styles related to the Transaction controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+label {
+  display: block !important;
+}
+
+.main-container {
+  height: 100%;
+  margin: 0;
+  .left-nav {
+    width: 20%;
+    height: 100%;
+    background-color: #3778c2;
+    float: left;
+
+    .profile {
+      padding-top: 5%;
+      padding-left: 25%;
+
+      .profile-img {
+        display: inline-block;
+        border-radius: 50%;
+      }
+    }
+
+    .side-bar-link {
+      display: block;
+      padding: 5vh;
+      font-size: larger;
+      font-family: "Montserrat";
+      font-weight: bolder;
+      color: #8198b6;
+    }
+  }
+
+  .right-container {
+    width: 80%;
+    height: 100%;
+    background-color: #f0f2f1;
+    float: right;
+
+    .internal-header {
+      background-color: rgb(48, 106, 170);
+      text-align: center;
+      padding: 15px 0;
+
+      h2 {
+        margin: 0;
+        font-size: larger;
+      }
+    }
+    .total-credit-header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 15px 0;
+
+      h2 {
+        color: #b4b6bc;
+        margin: 0;
+      }
+    }
+  }
+
+  .group-img {
+    width: 20vh;
+    height: 10vh;
+  }
+}

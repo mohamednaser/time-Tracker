@@ -1,0 +1,41 @@
+<div class="main-container">
+
+    <%= render "layouts/left" %>
+    <div class='right-container'>
+        <div class="internal-header"> 
+            <h2>New Transaction</h2>
+        </div>
+        <div class="transactios-cotainer">
+            <% flash.each do |type, msg| %>
+                <div>
+                <%= msg %>
+                </div>
+            <% end %>
+            <div class="single-transaction">
+                <%= form_for(@transaction , url: transaction_create_path(@transaction) ,class: "new-transaction-form") do |f| %>
+                    <% if @transaction.errors.full_messages.any? %>                    
+                        <%= render 'layouts/error_messages', errors: @transaction.errors %>
+                    <% end %>
+                    <div class="form-group">
+                        <%= f.label :name, "Transaction Name" %>
+                        <%= f.text_field :name ,class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :hours, "Hours" %>
+                        <%= f.text_field :hours ,class: "form-control" %>
+                        <%= f.label :minutes, "Minutes" %>
+                        <%= f.text_field :minutes ,class: "form-control" %>
+                    </div>
+
+                    <div class="form-group">
+                        <%= f.label :group_id, "Group " %>
+                        <%= f.select :group_id , available_group_dropdown , class: "form-control" %>
+                    </div>
+                    <%= f.submit "Save Transaction" ,class: "btn btn-success"%>
+
+                <% end %>
+            </div>
+
+        </div>
+    </div>
+</div>

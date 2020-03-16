@@ -1,0 +1,28 @@
+<div class="main-container">
+
+    <%= render "layouts/left" %>
+    <div class='right-container'>
+        <div class="internal-header"> 
+            <h2>New Group</h2>
+        </div>
+        <div class="transactios-cotainer">
+            <div class="new-group-div">                
+                <%= form_for(@group , url: group_create_path(@group) ,class: "new-transaction-form") do |f| %>
+                    <% if @group.errors.full_messages.any? %>                    
+                        <%= render 'layouts/error_messages', errors: @group.errors %>
+                    <% end %>
+                    <div class="form-group">
+                        <%= f.label :name, "Group Name" %>
+                        <%= f.text_field :name ,class: "form-control" %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.label :icon, "icon URL (ex: https://img.icons8.com/color/48/000000/maxcdn.png)" %>
+                        <%= f.text_field :icon ,class: "form-control" %>
+                     </div>
+
+                         <%= f.submit "Save Group" ,class: "btn btn-success"%>
+                 <% end %>
+            </div>
+        </div>
+    </div>
+</div>

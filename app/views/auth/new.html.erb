@@ -1,0 +1,20 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+  <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+
+    <%= form_for(@user , url: login_path(@user) ,class: "new-transaction-form") do |f| %>
+      <div class="form-group">
+          <%= f.text_field :name ,class: "fadeIn second" , placeholder: "Enter your name"%>
+      </div>
+
+      <%= f.submit "Log In" ,class: "fadeIn fourth"%>  
+      <%= link_to  "Register New User ", register_path %>  
+    <% end %>
+  </div>
+</div>
