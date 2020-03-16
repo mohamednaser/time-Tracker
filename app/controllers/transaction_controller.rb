@@ -2,13 +2,11 @@ class TransactionController < ApplicationController
   before_action :signed_in?
 
   def index
-    @transactions = Transaction.where("`authorid` =  #{@current_user.id}").most_recent
-    @total_duration_time = Transaction.select("SUM(amount)").where("`authorid` =  #{@current_user.id}")
-    
+    @transactions = Transaction.where(authorid:  @current_user.id).most_recent    
   end
 
   def external
-    @transactions = Transaction.where("`authorid` =  #{@current_user.id} ANd `group_id` IS NULL").most_recent
+    @transactions = Transaction.where(authorid: @current_user.id).where("`group_id` IS NULL").most_recent
   end
 
   def group_transactions
