@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
 class TransactionController < ApplicationController
-  before_action :is_signed_in
+  before_action :signed_in?
 
   def index
     @transactions = Transaction.where("`authorid` =  #{@current_user.id}").most_recent

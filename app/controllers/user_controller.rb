@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class UserController < ApplicationController
   def new
     @user = User.new
@@ -14,7 +12,7 @@ class UserController < ApplicationController
       redirect_to register_path, alert: @user.errors.full_messages.join('. ').to_s
     end
   end
-  
+
   def view; end
 
   def post_params

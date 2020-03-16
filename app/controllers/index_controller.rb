@@ -1,7 +1,5 @@
 class IndexController < ApplicationController
-  def create
-  end
+  def create; end
 
-  def new
-  end
+  def new; end
 end
