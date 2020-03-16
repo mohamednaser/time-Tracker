@@ -2,11 +2,11 @@ class TransactionController < ApplicationController
   before_action :signed_in?
 
   def index
-    @transactions = Transaction.where(authorid:  @current_user.id).most_recent    
+    @transactions = Transaction.where(authorid: @current_user.id).most_recent
   end
 
   def external
-    @transactions = Transaction.where(authorid: @current_user.id).where(group_id: [nil, ""]).most_recent
+    @transactions = Transaction.where(authorid: @current_user.id).where(group_id: [nil, '']).most_recent
   end
 
   def group_transactions
