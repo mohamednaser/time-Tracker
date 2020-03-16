@@ -3,6 +3,8 @@ class TransactionController < ApplicationController
 
   def index
     @transactions = Transaction.where("`authorid` =  #{@current_user.id}").most_recent
+    @total_duration_time = Transaction.select("SUM(amount)").where("`authorid` =  #{@current_user.id}")
+    
   end
 
   def external

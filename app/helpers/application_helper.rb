@@ -14,4 +14,8 @@ module ApplicationHelper
 
     Time.at(sec).utc.strftime('%H:%M:%S')
   end
+
+  def calculate_total_transactions_duration(transactions)
+    transactions.map(&:amount).inject(:+)
+  end
 end
