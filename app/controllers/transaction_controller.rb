@@ -6,7 +6,7 @@ class TransactionController < ApplicationController
   end
 
   def external
-    @transactions = Transaction.where(authorid: @current_user.id).where("`group_id` IS NULL").most_recent
+    @transactions = Transaction.where(authorid: @current_user.id).where(group_id: [nil, ""]).most_recent
   end
 
   def group_transactions
