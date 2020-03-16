@@ -8,9 +8,6 @@ class CreateTransactionsTable < ActiveRecord::Migration[5.2]
         
         t.timestamps 
      end
-
-     add_foreign_key :users, column: :authorid
-
   end
 end
  
