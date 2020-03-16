@@ -1,0 +1,35 @@
+<div class="main-container">
+
+    <%= render "layouts/left" %>
+    <div class='right-container'>
+        <div class="internal-header"> 
+            <h2>All groups</h2>
+        </div>
+        <div class="groups-cotainer">
+            <%
+                if @groups.empty? %>
+                    <h2> No Groups Found </h2>
+                <%
+                else 
+                    @groups.each do |group|
+                    %>  
+                        <a class="single-group" href="/group/transactions/<%= group.id %>">
+                            <div class="group-icon">
+                                <img src="<%= group.icon %>" class="group-img"/>
+                            </div>
+                            <div class="group-detail">
+                                <h3> <%=  group.name %></h3>
+                                <span> <%=  group.created_at %> </span>
+                            </div>
+                        </a>
+                     <%
+                    end
+                end 
+            %>
+
+            <div class="new-group-div">
+              <%= link_to  "New roup", group_new_path %>  
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="main-container">
+
+    <%= render "layouts/left" %>
+    <div class='right-container'>
+        <div class="internal-header"> 
+            <h2>Group Transactions for (<%= @group.name %>) </h2>
+        </div>
+        <div class="transactios-cotainer">
+            <%
+                if @transactions.empty? %>
+                <h2> No Transactions Found </h2>             
+             <% 
+                else             
+                @transactions.each do |transaction| %>
+                    <div class="single-transaction">
+                        <div class="group-icon">
+                            <img src="<%= group_icon(transaction) %>" class="group-img"/>
+                        </div>
+                        <div class="transaction-detail">
+                            <h3>  <%= transaction.name%></h3>
+                            <h4>author : <%= transaction.user.name%> </h4>
+                            <span>  <%= transaction.created_at%> </span>
+                        </div>
+                        <div class="transaction-amount">
+                            <%= seconds_to_hms(transaction.amount) %>
+                        </div>
+                    </div>
+                <%    
+                end   
+            end             
+            %>
+        </div>
+    </div>
+</div>

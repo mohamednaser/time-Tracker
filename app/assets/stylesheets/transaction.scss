@@ -1,0 +1,46 @@
+// Place all the styles related to the Transaction controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-transaction-div {
+  background-color: #60b524;
+  text-align: center;
+
+  a {
+    border-width: 0.5vh;
+    width: 80%;
+    margin: 3vh;
+    border-color: white;
+    background-color: #60b524;
+    border: solid;
+    color: #e1f0da;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+}
+
+.new-transaction-form {
+  width: 100%;
+}
+
+.new_transaction {
+  margin: auto;
+  width: 50%;
+}
+
+.single-transaction {
+  margin: 1vh;
+  background-color: #fdfdfd;
+  display: flex;
+
+  .group-icon {
+    margin: 2vh;
+    padding: 0;
+  }
+
+  .transaction-amount {
+    margin-top: 3%;
+    margin-right: 5%;
+    padding-left: 50%;
+  }
+}
