@@ -7,7 +7,7 @@
         </div>
         <div class="total-credit-header"> 
             <h2>Total Logged hours </h2>
-            <span> <%= seconds_to_hms(@transactions.sum("amount")) %> hr<span>
+            <span> <%= seconds_to_hms(@transactions.sum(:amount)) %> hr<span>
         </div>
         <div class="transactios-cotainer">
             <%
