@@ -7,7 +7,7 @@
         </div>
         <div class="transactios-cotainer">
             <div class="new-group-div">                
-                <%= form_for(@group , url: group_create_path(@group) ,class: "new-transaction-form") do |f| %>
+                <%= form_for(@group , url: groups_path(@group),method: :post ,class: "new-transaction-form") do |f| %>
                     <% if @group.errors.full_messages.any? %>                    
                         <%= render 'layouts/error_messages', errors: @group.errors %>
                     <% end %>

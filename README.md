@@ -11,7 +11,7 @@ A simple time tracker allow users to create a events and assign time to event
 
 ## Live Demo
 
-[Live Demo Link](https://ror-social-media-app.herokuapp.com/users/sign_in)
+[Live Demo Link](https://ror-time-tracker.herokuapp.com)
 
 
 ## Getting Started

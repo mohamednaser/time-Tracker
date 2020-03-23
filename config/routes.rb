@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
   root to: 'transaction#index'
 
-  get 'group/index'
-  post "group/create", to: "group#create"
-  get 'group/new'
-  get 'group/transactions/:id' , to: "transaction#group_transactions"
+  get 'groups' ,to: "group#index"
+  post "groups", to: "group#create"
+  get 'groups/new', to: "group#new"
+  get 'groups/transactions/:id' , to: "transaction#group_transactions"
 
-  get 'transaction/index'
-  get 'transaction/view'
-  get 'transaction/external'
-  get 'transaction/new'
-  post "transaction/create", to: "transaction#create"
+  get 'transactions',to: "transaction#index"
+  get 'transactions/external', to: "transaction#external"
+  get 'transactions/new', to: "transaction#new"
+  post "transactions", to: "transaction#create"
+  # get 'transactions/:id',to: "transaction#view"
+
 
 
   get '/login' , to: 'auth#new'

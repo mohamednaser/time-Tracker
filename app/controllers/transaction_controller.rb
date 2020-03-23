@@ -26,9 +26,9 @@ class TransactionController < ApplicationController
     @transaction.amount = (post_params[:hours].to_i * 60 * 60) + (post_params[:minutes].to_i * 60)
 
     if @transaction.save
-      redirect_to transaction_index_path, notice: 'transaction was successfully created.'
+      redirect_to transactions_path, notice: 'transaction was successfully created.'
     else
-      redirect_to transaction_new_path, alert: @transaction.errors.full_messages.join('. ').to_s
+      redirect_to transactions_new_path, alert: @transaction.errors.full_messages.join('. ').to_s
     end
   end
 

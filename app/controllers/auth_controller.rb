@@ -6,7 +6,7 @@ class AuthController < ApplicationController
       redirect_to login_path, alert: 'User Not Found '
     else
       cookies[:user_id] = @user.id
-      redirect_to transaction_index_path
+      redirect_to transactions_path
     end
   end
 
