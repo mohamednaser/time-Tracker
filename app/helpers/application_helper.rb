@@ -8,7 +8,7 @@ module ApplicationHelper
       transaction.group.icon
     end
   end
-  
+
   def seconds_to_hms(sec = 555)
     return '00:00:00' if sec.nil?
 
