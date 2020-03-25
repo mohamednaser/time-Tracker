@@ -10,17 +10,12 @@ Rails.application.routes.draw do
   get 'transactions/external', to: "transaction#external"
   get 'transactions/new', to: "transaction#new"
   post "transactions", to: "transaction#create"
-  # get 'transactions/:id',to: "transaction#view"
-
-
 
   get '/login' , to: 'auth#new'
   post '/login' , to: 'auth#login'
-
-  get '/register' , to: 'user#new'
-  post '/register' , to: 'user#create'
-
   get '/logout' , to: 'auth#logout'
 
+  get 'users' , to: 'user#new'
+  post 'users' , to: 'user#create'
 
 end

@@ -9,7 +9,7 @@ class UserController < ApplicationController
     if @user.save
       redirect_to login_path, notice: 'User Created Successfully.'
     else
-      redirect_to register_path, alert: @user.errors.full_messages.join('. ').to_s
+      redirect_to users_path, alert: @user.errors.full_messages.join('. ').to_s
     end
   end
 
