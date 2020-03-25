@@ -1,14 +1,14 @@
 module ApplicationHelper
-  def group_icon(transaction)
-    return 'https://img.icons8.com/plasticine/100/000000/road-closure.png' if transaction.group_id.nil?
+  def transaction_group_icon(transaction)
+    return 'http://via.placeholder.com/200x100' if transaction.group_id.nil?
 
     if transaction.group.nil?
-      'https://img.icons8.com/plasticine/100/000000/road-closure.png'
+      'http://via.placeholder.com/200x100'
     else
       transaction.group.icon
     end
   end
-
+  
   def seconds_to_hms(sec = 555)
     return '00:00:00' if sec.nil?
 
