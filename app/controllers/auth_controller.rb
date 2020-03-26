@@ -1,5 +1,5 @@
 class AuthController < ApplicationController
-  def login
+  def create
     @user = User.find_by(name: post_params[:name])
 
     if @user.nil?
@@ -14,7 +14,7 @@ class AuthController < ApplicationController
     @user = User.new
   end
 
-  def logout
+  def destroy
     cookies.delete :user_id
     redirect_to login_path
   end

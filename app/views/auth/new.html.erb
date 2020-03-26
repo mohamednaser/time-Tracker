@@ -8,13 +8,13 @@
     </div>
   <% end %>
 
-    <%= form_for(@user , url: login_path(@user) ,class: "new-transaction-form") do |f| %>
+    <%= form_for(@user , url: login_path(@user), method: :post ,class: "new-transaction-form") do |f| %>
       <div class="form-group">
           <%= f.text_field :name ,class: "fadeIn second" , placeholder: "Enter your name"%>
       </div>
 
       <%= f.submit "Log In" ,class: "fadeIn fourth"%>  
-      <%= link_to  "Register New User ", users_path %>  
+      <%= link_to  "Register New User ", new_user_path %>  
     <% end %>
   </div>
 </div>

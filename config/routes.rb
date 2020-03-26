@@ -1,21 +1,17 @@
 Rails.application.routes.draw do
-  root to: 'transaction#index'
+  root to: 'transactions#index'
 
-  get 'groups' ,to: "group#index"
-  post "groups", to: "group#create"
-  get 'groups/new', to: "group#new"
-  get 'groups/transactions/:id' , to: "transaction#group_transactions"
+  # Custom Routes
+  get 'groups/transactions/:id' , to: "transactions#group_transactions"
+  get 'transactions/external', to: "transactions#external"
 
-  get 'transactions',to: "transaction#index"
-  get 'transactions/external', to: "transaction#external"
-  get 'transactions/new', to: "transaction#new"
-  post "transactions", to: "transaction#create"
+  post '/login', to: 'auth#create'
+  get '/login', to: 'auth#new'
+  delete '/logout', to: 'auth#destroy'
 
-  get '/login' , to: 'auth#new'
-  post '/login' , to: 'auth#login'
-  get '/logout' , to: 'auth#logout'
-
-  get 'users' , to: 'user#new'
-  post 'users' , to: 'user#create'
+  # resources
+  resources 'groups'
+  resources 'transactions'
+  resources 'users', only: [:new, :create]
 
 end

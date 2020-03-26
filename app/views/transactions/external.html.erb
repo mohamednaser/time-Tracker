@@ -3,7 +3,7 @@
     <%= render "layouts/left" %>
     <div class='right-container'>
         <div class="internal-header"> 
-            <h2>All Transactions</h2>
+            <h2>External Transactions</h2>
         </div>
         <div class="total-credit-header"> 
             <h2>Total Logged hours </h2>
@@ -12,17 +12,16 @@
         <div class="transactios-cotainer">
             <%
                 if @transactions.empty? %>
-                    <h2> No Transactions Found </h2> 
-                <%
-                else 
+                <h2> No Transactions Found </h2>             
+             <% 
+                else
                     @transactions.each do |transaction|
-                        concat render "transaction", transaction: transaction             
-                    end  
-                end
-                           
+                    concat render "transaction", transaction: transaction             
+                    end
+                end                
             %>
             <div class="new-transaction-div">
-              <%= link_to  "New Transaction", transactions_new_path %>  
+              <%= link_to  "New Transaction", new_transaction_path %>  
             </div>
         </div>
     </div>

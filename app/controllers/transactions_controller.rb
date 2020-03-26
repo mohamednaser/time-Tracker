@@ -1,4 +1,4 @@
-class TransactionController < ApplicationController
+class TransactionsController < ApplicationController
   before_action :signed_in?
 
   def index
@@ -28,7 +28,7 @@ class TransactionController < ApplicationController
     if @transaction.save
       redirect_to transactions_path, notice: 'transaction was successfully created.'
     else
-      redirect_to transactions_new_path, alert: @transaction.errors.full_messages.join('. ').to_s
+      redirect_to new_transaction_path, alert: @transaction.errors.full_messages.join('. ').to_s
     end
   end
 
