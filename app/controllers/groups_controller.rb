@@ -1,4 +1,4 @@
-class GroupController < ApplicationController
+class GroupsController < ApplicationController
   before_action :signed_in?
 
   def index
@@ -9,9 +9,9 @@ class GroupController < ApplicationController
     @group = Group.new(post_params)
 
     if @group.save
-      redirect_to group_index_path, notice: 'Group was successfully created.'
+      redirect_to groups_path, notice: 'Group was successfully created.'
     else
-      redirect_to group_new_path, alert: @group.errors.full_messages.join('. ').to_s
+      redirect_to groups_new_path, alert: @group.errors.full_messages.join('. ').to_s
     end
   end
 

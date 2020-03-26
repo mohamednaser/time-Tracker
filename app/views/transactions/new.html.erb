@@ -12,7 +12,7 @@
                 </div>
             <% end %>
             <div class="single-transaction">
-                <%= form_for(@transaction , url: transaction_create_path(@transaction) ,class: "new-transaction-form") do |f| %>
+                <%= form_for(@transaction , url: transactions_path(@transaction) , method: :post ,class: "new-transaction-form") do |f| %>
                     <% if @transaction.errors.full_messages.any? %>                    
                         <%= render 'layouts/error_messages', errors: @transaction.errors %>
                     <% end %>

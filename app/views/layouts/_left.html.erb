@@ -4,9 +4,9 @@
 
         Welcome <%= @current_user.name %>
     </div>
-    <%= link_to  "All my transactions", transaction_index_path ,class: "side-bar-link"%>
-    <%= link_to  "All my external transactions", transaction_external_path ,class: "side-bar-link"%>
-    <%= link_to  "All groups", group_index_path ,class: "side-bar-link"%>
-    <%= link_to  "Logout", logout_path ,class: "side-bar-link"%>
+    <%= link_to  "All my transactions", transactions_path ,class: "side-bar-link"%>
+    <%= link_to  "All my external transactions", transactions_external_path ,class: "side-bar-link"%>
+    <%= link_to  "All groups", groups_path ,class: "side-bar-link"%>
+    <%= link_to  "Logout", logout_path , method: :delete,class: "side-bar-link"%>
 
 </nav>

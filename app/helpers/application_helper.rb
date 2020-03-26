@@ -1,9 +1,9 @@
 module ApplicationHelper
-  def group_icon(transaction)
-    return 'https://img.icons8.com/plasticine/100/000000/road-closure.png' if transaction.group_id.nil?
+  def transaction_group_icon(transaction)
+    return 'http://via.placeholder.com/200x100' if transaction.group_id.nil?
 
     if transaction.group.nil?
-      'https://img.icons8.com/plasticine/100/000000/road-closure.png'
+      'http://via.placeholder.com/200x100'
     else
       transaction.group.icon
     end
@@ -13,5 +13,9 @@ module ApplicationHelper
     return '00:00:00' if sec.nil?
 
     Time.at(sec).utc.strftime('%H:%M:%S')
+  end
+
+  def calculate_total_transactions_duration(transactions)
+    transactions.map(&:amount).inject(:+)
   end
 end

@@ -13,7 +13,7 @@
                 else 
                     @groups.each do |group|
                     %>  
-                        <a class="single-group" href="/group/transactions/<%= group.id %>">
+                        <a class="single-group" href="/groups/transactions/<%= group.id %>">
                             <div class="group-icon">
                                 <img src="<%= group.icon %>" class="group-img"/>
                             </div>
@@ -28,7 +28,7 @@
             %>
 
             <div class="new-group-div">
-              <%= link_to  "New roup", group_new_path %>  
+              <%= link_to  "New Group", new_group_path %>  
             </div>
         </div>
     </div>

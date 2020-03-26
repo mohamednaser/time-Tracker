@@ -5,8 +5,6 @@ class CreateTransactionsTable < ActiveRecord::Migration[5.2]
         t.string :name
         t.integer :amount
         t.integer :group_id
-
-        add_foreign_key :users, column: :authorid
         
         t.timestamps 
      end

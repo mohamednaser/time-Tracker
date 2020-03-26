@@ -11,7 +11,7 @@ A simple time tracker allow users to create a events and assign time to event
 
 ## Live Demo
 
-[Live Demo Link](https://ror-social-media-app.herokuapp.com/users/sign_in)
+[Live Demo Link](https://ror-time-tracker.herokuapp.com)
 
 
 ## Getting Started
@@ -20,7 +20,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
+Ruby: 2.7.0
 Rails: 5.2.3
 Postgres: >=9.5
 
@@ -54,7 +54,7 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
-    rpsec --format documentation
+    rspec --format documentation
 ```
 
 ## Authors
